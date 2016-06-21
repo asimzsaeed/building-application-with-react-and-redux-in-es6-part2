@@ -284,3 +284,22 @@ export default Navbar;
 ```
 
 
+**Index.js** `./index.js` - update the index page
+
+    import 'babel-polyfill';
+    import React from 'react';
+    import {render} from 'react-dom';
+    import {Router, browserHistory} from 'react-router';
+    import routes from './routes';
+    import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+    
+    render(
+        <Router history={browserHistory} routes={routes}/>,
+        document.getElementById('app')
+    );
+
+
+Finally our foundation app is ready now open the console and type `npm start` to run your application. 
+
+
+In next part we will explore Redux, Actions, Stores and Reducers and how integrate React with Redux
